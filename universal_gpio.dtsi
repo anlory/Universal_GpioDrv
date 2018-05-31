@@ -1,0 +1,31 @@
+	xd-gpios{
+		compatible = "xd,gpios";
+		status = "okay";
+		USB{
+			label = "usb";
+			USB1_DRV_ENABLE {
+				label = "usb1_drv_enable";
+				gpios = <&gpio6 GPIO_A5 GPIO_ACTIVE_HIGH>;
+				default = <1>;
+				power_down_status = <0>;
+			};
+			HUB_RST_ENABLE {
+				label = "hub_rst_enable";
+				gpios = <&gpio0 GPIO_B5 GPIO_ACTIVE_HIGH>;
+				default = <1>;
+				power_down_status = <0>;
+			};
+			USB2_DRV_ENABLE {
+				label = "usb2_drv_enable";
+				gpios = <&gpio6 GPIO_A2 GPIO_ACTIVE_HIGH>;
+				default = <1>;
+				power_down_status = <0>;
+			};
+			USB3_DRV_ENABLE {
+				label = "usb3_drv_enable";
+				gpios = <&gpio6 GPIO_A0 GPIO_ACTIVE_HIGH>;
+				default = <1>;
+				power_down_status = <0>;
+			};
+		};
+	};
